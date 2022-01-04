@@ -17,6 +17,7 @@ services:
       DB_HOST: "mysql"
       DB_USER: "root"
       DB_PASSWORD: ""
+      DYNAMODB_ENDPOINT: "http://dynamodb:8000"
     depends_on:
       - mysql
     tty: true
@@ -32,3 +33,13 @@ services:
     environment:
       MYSQL_USER: "root"
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+
+  dynamodb:
+    build:
+      context: .
+      dockerfile: ./docker/dynamodb/Dockerfile
+    container_name: dynamodb
+    ports:
+      - 8000:8000
+    environment:
+      DEFAULT_REGION: ap-northeast-1
