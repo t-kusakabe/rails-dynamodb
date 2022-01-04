@@ -8,8 +8,8 @@ default: &default
 
 development:
   <<: *default
-  database: rails_dyamodb_development
+  database: rails_dynamodb_dev
 
 test:
   <<: *default
-  database: rails_dyamodb_test
+  database: rails_dynamodb_test
