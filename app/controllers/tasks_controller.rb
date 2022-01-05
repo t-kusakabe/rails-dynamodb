@@ -6,7 +6,6 @@ class TasksController < ApplicationController
   end
 
   def create
-    binding.pry
     task = Task.create(name: tasks_params[:id])
 
     render json: task
