@@ -8,9 +8,12 @@ gem "mysql2", "~> 0.5"
 gem "puma", "~> 5.0"
 gem "bootsnap", require: false
 gem "dynamoid"
+gem "aws-sdk"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
 
-group :development do; end
+group :development do
+  gem "pry-rails"
+end
