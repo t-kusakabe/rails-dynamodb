@@ -1,7 +1,6 @@
 Dynamoid.configure do |config|
   config.region = 'ap-northeast-1'
-  config.endpoint = ENV.fetch('DYNAMODB_ENDPOINT', 'http://dynamodb:8000') 
-  config.namespace = 'development'
-  config.read_capacity = 5 
-  config.write_capacity = 5
+  config.access_key = 'key'
+  config.secret_key = 'secret'
+  config.endpoint = ENV.fetch('DYNAMODB_ENDPOINT', 'http://localhost:8000')
 end
