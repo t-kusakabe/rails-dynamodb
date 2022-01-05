@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   scope :api do
-    resources :tests, only: %i[index]
+    resources :tasks, only: %i[index create]
   end
 end
